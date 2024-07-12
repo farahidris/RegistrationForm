@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Redirect</title>
+</head>
+<body>
+    <form id="myForm" action="https://docs.google.com/forms/d/e/your-google-form-id/formResponse" method="POST">
+        <!-- Include your form fields here -->
+        <input type="hidden" name="entry.field_id" value="example_value">
+        <!-- Add more hidden inputs corresponding to your form fields -->
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        document.getElementById('myForm').onsubmit = function() {
+            setTimeout(function() {
+                window.location.href = ''; // Replace with your flipbook URL
+            }, 1000); // Delay to ensure form submission
+            return true;
+        };
+    </script>
+</body>
+</html>
